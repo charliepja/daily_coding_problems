@@ -15,4 +15,15 @@ module.exports.numbersInArrayEqualK = async (listOfNumbers, valueOfk) => {
 	if (numbers.length < 2) return false;
 	const totalOfNumbers = numbers.reduce((acc, cur) => acc + cur);
 	if (totalOfNumbers < valueOfk) return false;
+
+	let doesEqualK = false;
+	let i = 1;
+
+	while((doesEqualK === false && i < numbers.length)) {
+		const equation = numbers[0] + numbers[i];
+		if(equation === valueOfk) return doesEqualK = true;
+		i++;
+	}
+
+	return doesEqualK;
 };

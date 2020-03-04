@@ -33,5 +33,20 @@ describe('Daily Coding Problems', function() {
 			const result = await day1.numbersInArrayEqualK([10, 15, 3, 7], 17);
 			assert.equal(result, true)
 		});
+
+		it('should return false if two numbers within an array do not add up to the value of k', async function() {
+			const result = await day1.numbersInArrayEqualK([10, 15, 3, 7], 28);
+			assert.equal(result, false)
+		});
+
+		it('should return true if two numbers within an array add up to the value of k even if some of the array is strings', async function() {
+			const result = await day1.numbersInArrayEqualK([10, 'blue', 15, 'green', 3, 'red', 7, 'orange'], 17);
+			assert.equal(result, true)
+		});
+
+		it('should return false if two numbers within an array do not add up to the value of k even if some of the array is strings', async function() {
+			const result = await day1.numbersInArrayEqualK([10, 'blue', 15, 'green', 3, 'red', 7, 'orange'], 35);
+			assert.equal(result, false)
+		});
 	});
 });
