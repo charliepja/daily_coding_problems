@@ -1,0 +1,22 @@
+{
+  "name": "daily_coding_problems",
+  "version": "1.0.0",
+  "description": "",
+  "main": "day1.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charliepja/daily_coding_problems.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charliepja/daily_coding_problems/issues"
+  },
+  "homepage": "https://github.com/charliepja/daily_coding_problems#readme",
+  "devDependencies": {
+    "mocha": "^7.1.0"
+  }
+}
