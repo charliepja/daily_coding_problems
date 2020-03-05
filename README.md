@@ -35,3 +35,30 @@ for number of numbers
 
 	return doesEqual
 ```
+---
+
+## Day 2
+
+*Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.*
+
+```js
+input = [1, 2, 3, 4, 5]
+expected_output = [120, 60, 40, 30, 24]
+
+input2 = [3, 2, 1]
+expected_output2 = [2, 3, 6]
+```
+
+### Initial Planning
+
+```
+new_array = []
+
+for i of numbers
+	clone_numbers = numbers.clone()
+	clone_numbers.pop(i)
+	result = clone_numbers.reduce((acc, cur) => acc + cur)
+	new_array.push(result)
+
+return new_array
+```
