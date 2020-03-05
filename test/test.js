@@ -57,8 +57,8 @@ describe('Daily Coding Problems', function() {
 			assert.equal(result, 'No numbers');
 		});
 
-		it('should return "No numbers" if array of numbers is strings', async function() {
-			const result = await day2.productOfNumbers(['1', '2', '3', '4', '5']);
+		it('should return "No numbers" if array is of alphabetic characters', async function() {
+			const result = await day2.productOfNumbers(['a', 'b', 'c', 'd', 'e']);
 			assert.equal(result, 'No numbers');
 		});
 
@@ -70,6 +70,11 @@ describe('Daily Coding Problems', function() {
 		it('should return an array of new numbers that has the product of all numbers excluding the number at each index', async function() {
 			const result = await day2.productOfNumbers([1, 2, 3, 4, 5]);
 			assert.deepStrictEqual(result, [120, 60, 40, 30, 24]);
+		});
+
+		it('should still if array of numbers is strings', async function() {
+			const result = await day2.productOfNumbers(['1', '2', '3', '4', '5']);
+			assert.equal(result, [120, 60, 40, 30, 24]);
 		});
 	});
 });
