@@ -74,7 +74,7 @@ describe('Daily Coding Problems', function() {
 
 		it('should still if array of numbers is strings', async function() {
 			const result = await day2.productOfNumbers(['1', '2', '3', '4', '5']);
-			assert.equal(result, [120, 60, 40, 30, 24]);
+			assert.deepStrictEqual(result, [120, 60, 40, 30, 24]);
 		});
 	});
 });
